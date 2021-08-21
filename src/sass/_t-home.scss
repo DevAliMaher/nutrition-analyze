@@ -1,0 +1,8 @@
+.main-app-header {
+  @apply font-bold text-main-lightGreen dark:text-main-darkGreen text-xl;
+}
+
+.app-intro {
+  width: clamp(300px, 100%, 500px);
+  @apply text-center;
+}

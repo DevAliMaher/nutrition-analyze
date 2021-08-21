@@ -1,0 +1,37 @@
+.analyze-meal-form {
+  width: clamp(300px, 100%, 600px);
+  @apply flex flex-col justify-center items-center;
+}
+
+.analyze-header {
+  @apply mb-12 font-bold text-main-lightGreen dark:text-main-darkGreen text-3xl sm:text-2xl;
+}
+
+app-analyze-meal .analyze-meal-form mat-form-field.input {
+  @apply w-full;
+}
+
+.submit-hint {
+  @apply w-full flex items-start justify-between;
+}
+
+.ingredients-label {
+  text-align: start;
+  @apply w-full px-4;
+}
+
+.hint-header {
+  @apply mb-6 mt-2 font-bold w-full text-center text-2xl;
+}
+
+.hint-title {
+  @apply text-base xs:text-sm;
+}
+
+.hint-list-item {
+  @apply text-sm xs:mb-4 xs:text-xs #{!important};
+}
+
+app-hints .mat-list-base .mat-list-item .mat-line {
+  @apply whitespace-normal #{!important};
+}

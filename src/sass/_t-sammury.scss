@@ -1,0 +1,17 @@
+.summary-header {
+  @apply w-full mt-4 font-bold text-center text-main-lightGreen dark:text-main-darkGreen;
+}
+
+.error-message-container {
+  width: clamp(300px, 100%, 450px);
+  margin: 4rem auto;
+  @apply text-center p-4 shadow-xl;
+}
+
+.error-header {
+  @apply text-main-warn mb-4;
+}
+
+.error-body {
+  @apply text-main-warn;
+}

@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="h-full">
+  <!-- toggle side nav -->
+  <button mat-icon-button class="menu-btn" (click)="toggleSideNav.emit(true)">
+    <mat-icon class="material-icons-round">menu</mat-icon>
+  </button>
+  <!-- toggle lang -->
+  <button (click)="toggleLang.emit(lang)" class="lang-btn">
+    {{ "lang" | translate }}
+  </button>
+  <!-- divider -->
+  <mat-divider [vertical]="true" class="header-divider"></mat-divider>
+  <!-- dark mode -->
+  <button
+    mat-icon-button
+    class="icon-btn dark-mode-icon"
+    (click)="toggleTheme.emit(theme)"
+  >
+    <mat-icon class="material-icons-round">{{
+      theme === "dark" ? "dark_mode" : "light_mode"
+    }}</mat-icon>
+  </button>
+  <!-- routs -->
+  <div class="header-routes">
+    <a
+      *ngFor="let route of routes"
+      [routerLink]="[route.route]"
+      routerLinkActive="route-item-active"
+      class="route-item"
+    >
+      {{ route.title | translate }}
+    </a>
+  </div>
+  <!-- logo -->
+  <div routerLink="/" class="main-logo">
+    <img src="./assets/images/herbalife-nutrition.svg" alt="bCare-logo" /></div
+></mat-toolbar>

@@ -1,0 +1,58 @@
+.app-main-container {
+  @apply min-h-full pt-16;
+}
+
+.app-block {
+  @apply block relative;
+}
+
+.app-inline-block {
+  @apply inline-block relative;
+}
+
+.app-flex-center {
+  min-height: calc(100vh - 4rem);
+  @apply h-full w-full flex items-center justify-center p-4;
+}
+
+.app-flex-start {
+  @apply w-full flex items-start justify-center gap-x-4 sm:flex-col sm:items-stretch sm:gap-y-4 sm:gap-x-0;
+}
+
+.app-full-space {
+  @apply block relative h-full w-full pt-4 pb-4;
+}
+
+.flex-column {
+  @apply w-full flex flex-col gap-y-8;
+}
+
+.app-full-width {
+  @apply block relative w-full;
+}
+
+.app-full-space-padding {
+  @apply block relative h-full w-full p-2;
+}
+
+.responsive-container {
+  @apply mx-auto w-3/4 px-6 lg:w-4/5 md:w-11/12 xs:w-full xs:px-2;
+}
+
+.route-item {
+  @apply justify-center pt-1 pb-1 border-none text-base hover:text-main-sunny hover:bg-transparent  #{!important};
+}
+
+.route-item-active {
+  @apply text-main-sunny bg-transparent;
+}
+
+.add-mark {
+  @apply relative #{!important};
+}
+
+.add-mark::before {
+  content: "\2714";
+  transform: translateY(-50%);
+  @apply absolute top-2/4 text-main-lightGreen dark:text-main-darkGreen;
+}

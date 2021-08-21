@@ -1,0 +1,37 @@
+.summary-area {
+  @apply bg-main-light dark:bg-main-lighterDark p-2 pb-4 rounded;
+}
+
+.nutrition-claims-header,
+.nutrition-details-header {
+  @apply w-full rounded bg-main-gray dark:bg-main-lighterDark mb-2;
+}
+.nutrition-claims-header {
+  @apply text-center;
+}
+
+.nutrition-claims-data,
+.nutrition-details-data {
+  @apply px-8 sm:px-2;
+}
+
+.nutrition-details-header,
+.nutrition-details-data {
+  @apply flex items-center justify-between w-full;
+}
+
+.nutrition-details-data:last-of-type {
+  @apply pb-4;
+}
+
+.detail-item-f {
+  @apply w-6/12 uppercase;
+}
+
+.detail-item-s {
+  @apply w-1/5;
+}
+
+.detail-item-f-data {
+  padding-inline-start: 1rem;
+}

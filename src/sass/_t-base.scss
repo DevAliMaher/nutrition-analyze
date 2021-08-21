@@ -1,0 +1,16 @@
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-main-light dark:bg-main-dark dark:text-main-light;
+  }
+
+  button,
+  button:focus,
+  button:active {
+    @apply outline-none border-none min-w-max;
+  }
+}

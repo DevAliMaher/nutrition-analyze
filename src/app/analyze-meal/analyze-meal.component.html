@@ -1,0 +1,30 @@
+<form
+  [formGroup]="analyzeForm"
+  (ngSubmit)="onSubmitForm()"
+  class="analyze-meal-form"
+>
+  <!-- header -->
+  <h1 class="analyze-header">{{ "analyze-meal-header" | translate }}</h1>
+  <!-- recipe title -->
+  <app-general-input [control]="title"></app-general-input>
+  <!-- ingredients  -->
+  <p class="ingredients-label">
+    {{ "ingredients-label" | translate }}
+  </p>
+  <app-text-area [control]="ingredients"></app-text-area>
+  <!-- submit form -->
+  <div class="submit-hint">
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="analyzeForm.invalid || analyzeForm.disabled"
+      class="w-32"
+    >
+      {{ "analyze-btn" | translate }}
+    </button>
+    <button mat-icon-button type="button" (click)="openHints()">
+      <mat-icon class="material-icons-round">lightbulb</mat-icon>
+    </button>
+  </div>
+</form>

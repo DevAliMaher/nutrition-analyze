@@ -1,0 +1,60 @@
+// side-nav
+mat-sidenav.material-side-nav {
+  @apply fixed top-16 bottom-0 w-72;
+}
+
+.side-nav-container {
+  @apply flex flex-col justify-between items-stretch h-full w-full overflow-hidden;
+}
+
+.close-side-nav-container {
+  @apply flex justify-end items-center px-3 select-none h-16;
+}
+
+.close-side-nav {
+  @apply flex justify-center items-center w-7 rounded-full bg-main-darkGreen cursor-pointer;
+}
+
+.close-icon {
+  @apply text-main-orange font-bold;
+}
+
+.main-routes-container {
+  @apply overflow-y-auto overflow-x-hidden h-full flex flex-col;
+}
+
+.route-item {
+  @apply py-6 px-5 cursor-pointer border-b-2 border-main-lighterDark flex justify-start items-center;
+}
+
+.route-item:last-child {
+  @apply border-none;
+}
+
+.route-item:hover,
+.active-route {
+  @apply bg-main-darkGreen;
+}
+
+.route-item .route-icon {
+  @apply text-main-darkGreen transition duration-500;
+}
+
+.active-route .route-icon,
+.route-item:hover .route-icon {
+  @apply text-main-orange;
+}
+
+.route-title {
+  @apply text-main-darkGreen justify-self-stretch mx-4;
+}
+
+@screen sm {
+  mat-sidenav.material-side-nav {
+    @apply w-60;
+  }
+
+  .route-title {
+    @apply mx-3 text-sm;
+  }
+}
