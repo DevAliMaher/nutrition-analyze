@@ -52,9 +52,9 @@
             *ngFor="let related of item.value.related"
             class="nutrition-details-data"
           >
-            <p class="detail-item-f detail-item-f-data">{{ related.label }}</p>
-            <p class="detail-item-s">{{ related.quantity | number }}</p>
-            <p class="detail-item-s">{{ related.unit }}</p>
+            <p class="detail-item-f detail-item-f-data">{{ related?.label }}</p>
+            <p class="detail-item-s">{{ related?.quantity | number }}</p>
+            <p class="detail-item-s">{{ related?.unit }}</p>
           </div>
         </div>
       </div>
