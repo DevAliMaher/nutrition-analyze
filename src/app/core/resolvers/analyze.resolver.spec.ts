@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 
 import { AnalyzeResolver } from './analyze.resolver';
@@ -8,7 +8,7 @@ describe('AnalyzeResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [HttpClient],
+      imports: [HttpClientModule],
     });
     resolver = TestBed.inject(AnalyzeResolver);
   });

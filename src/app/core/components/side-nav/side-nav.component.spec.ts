@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { SideNavComponent } from './side-nav.component';
 
@@ -8,9 +9,10 @@ describe('SideNavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SideNavComponent ]
-    })
-    .compileComponents();
+      declarations: [SideNavComponent],
+      imports: [TranslateModule.forRoot()],
+      providers: [TranslateService],
+    }).compileComponents();
   });
 
   beforeEach(() => {

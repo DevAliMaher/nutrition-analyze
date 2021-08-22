@@ -41,7 +41,7 @@ export class IngredientSummaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.ingredients = this.route.snapshot.queryParams.ingr
-      .split('\n')
+      ?.split('\n')
       .map((item: string, index: number) => {
         return {
           '1- Ingredient': item,
