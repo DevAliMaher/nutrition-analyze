@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { AnalyzeMealComponent } from './analyze-meal.component';
 
@@ -8,9 +9,10 @@ describe('AnalyzeMealComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnalyzeMealComponent ]
-    })
-    .compileComponents();
+      declarations: [AnalyzeMealComponent],
+      imports: [TranslateModule.forRoot()],
+      providers: [TranslateService],
+    }).compileComponents();
   });
 
   beforeEach(() => {

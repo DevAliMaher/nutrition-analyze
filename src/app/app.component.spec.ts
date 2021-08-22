@@ -1,13 +1,24 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { NgxsModule } from '@ngxs/store';
+import { AppSettingsState } from 'src/app/core/states/app-state';
+import { environment } from 'src/environments/environment';
 
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [
+        RouterTestingModule,
+        TranslateModule.forRoot(),
+        NgxsModule.forRoot([AppSettingsState], {
+          developmentMode: !environment.production,
+        }),
+      ],
       declarations: [AppComponent],
+      providers: [TranslateService],
     }).compileComponents();
   });
 
@@ -17,11 +28,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  // it(`should have as title 'Nutrition-Analysis'`, () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.componentInstance;
-  //   expect(app.title).toEqual('Nutrition-Analysis');
-  // });
+  it(`should have as title 'Nutrition-Analysis'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.onToggleLang).toHaveBeenCalledWith('en' || 'ar');
+  });
 
   // it('should render title', () => {
   //   const fixture = TestBed.createComponent(AppComponent);

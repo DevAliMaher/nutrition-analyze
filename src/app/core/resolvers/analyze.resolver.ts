@@ -12,7 +12,7 @@ import {
 import { environment } from 'src/environments/environment';
 
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve, Router } from '@angular/router';
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -20,8 +20,7 @@ import { ActivatedRouteSnapshot, Resolve, Router } from '@angular/router';
 export class AnalyzeResolver implements Resolve<any> {
   constructor(
     private fullRecipeAnalysisService: FullRecipeAnalysisService,
-    private individualTextLineAnalysisService: IndividualTextLineAnalysisService,
-    private router: Router
+    private individualTextLineAnalysisService: IndividualTextLineAnalysisService
   ) {}
 
   resolve(

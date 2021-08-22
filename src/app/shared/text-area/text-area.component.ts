@@ -6,6 +6,7 @@ import {
   HostBinding,
   Input,
 } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-text-area',
@@ -28,5 +29,9 @@ import {
 })
 export class TextAreaComponent {
   @HostBinding('class.app-full-width') app = true;
-  @Input() control: InputModel = {} as InputModel;
+  @Input() control: InputModel = {
+    control: new FormControl(),
+    placeholder: '',
+    error: '',
+  };
 }

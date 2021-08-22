@@ -9,7 +9,7 @@
   "title-placeholder": "عنوان الوصفه",
   "title-errors": "من فضلك ادخل عنوان الوصفة",
   "ingredients-label": "المكونات",
-  "ingredients-placeholder": "على سبيل المثال: \n 1 كوب عصير برتقال \n 2 جزر \n 3 ملاعق كبيرة زيت زيتون",
+  "ingredients-placeholder": "For example: \n 1 cup orange juice \n 2 carrots \n 3 tablespoons olive oil",
   "ingredients-errors": "من فضلك ادخل المكونات",
   "analyze-btn": "حلل",
   "hint-header": "نصائح",

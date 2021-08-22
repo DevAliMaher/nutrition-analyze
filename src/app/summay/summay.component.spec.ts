@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { SummayComponent } from './summay.component';
 
@@ -8,9 +9,10 @@ describe('SummayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SummayComponent ]
-    })
-    .compileComponents();
+      declarations: [SummayComponent],
+      imports: [TranslateModule.forRoot()],
+      providers: [TranslateService],
+    }).compileComponents();
   });
 
   beforeEach(() => {
