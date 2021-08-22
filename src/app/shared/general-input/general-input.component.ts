@@ -6,6 +6,7 @@ import {
   HostBinding,
   Input,
 } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-general-input',
@@ -25,5 +26,9 @@ import {
 })
 export class GeneralInputComponent {
   @HostBinding('class.app-full-width') app = true;
-  @Input() control: InputModel = {} as InputModel;
+  @Input() control: InputModel = {
+    control: new FormControl(),
+    placeholder: '',
+    error: '',
+  };
 }

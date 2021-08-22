@@ -17,7 +17,7 @@ import {
 export class TotalSummaryComponent implements OnInit {
   @HostBinding('class.app-block') centerContent = true;
   @Input() totalSummary: SummaryResponseModificationModel =
-    {} as SummaryResponseModificationModel;
+    new Object() as SummaryResponseModificationModel;
 
   chartData: ChartModel[] = [];
   constructor() {}
