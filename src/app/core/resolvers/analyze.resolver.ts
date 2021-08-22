@@ -51,6 +51,7 @@ export class AnalyzeResolver implements Resolve<any> {
         })
       );
     });
+// the response make quite confused,  I would call at first post api to get summary and ingredients then use concatmap to forkjoin get api for all ingredients but as i said response wasn't match my expectation
     // join all requests in one
     return forkJoin(observables).pipe(
       // map data to display it
